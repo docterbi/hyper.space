@@ -12,8 +12,9 @@ javascript:(function() {
         let note = document.createElement("div");
         note.innerText = text;
         note.style.position = "fixed";
-        note.style.bottom = "20px";
-        note.style.right = "20px";
+        note.style.top = "10px";
+        note.style.left = "50%";
+        note.style.transform = "translateX(-50%)";
         note.style.background = "yellow";
         note.style.color = "black";
         note.style.padding = "10px";
@@ -25,5 +26,5 @@ javascript:(function() {
         document.body.appendChild(note);
     }
 
-    addStickyNote("Script đang chạy: Tự động click switch mỗi 5s nếu nó đang tắt.");
+    addStickyNote("✅ Script đang chạy: Tự động click switch mỗi 5s nếu nó đang tắt.");
 })();
