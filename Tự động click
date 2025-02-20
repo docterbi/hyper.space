@@ -1,0 +1,29 @@
+javascript:(function() {
+    var int;
+    int = setInterval(function() {
+        let button = document.querySelector('button[role="switch"][data-state="unchecked"]');
+        if (button) {
+            button.click();
+            console.log("Đã click nút switch (unchecked)!");
+        }
+    }, 5000);
+    
+    function addStickyNote(text) {
+        let note = document.createElement("div");
+        note.innerText = text;
+        note.style.position = "fixed";
+        note.style.bottom = "20px";
+        note.style.right = "20px";
+        note.style.background = "yellow";
+        note.style.color = "black";
+        note.style.padding = "10px";
+        note.style.border = "1px solid black";
+        note.style.borderRadius = "5px";
+        note.style.zIndex = "9999";
+        note.style.fontSize = "14px";
+        note.style.boxShadow = "2px 2px 10px rgba(0,0,0,0.3)";
+        document.body.appendChild(note);
+    }
+
+    addStickyNote("Script đang chạy: Tự động click switch mỗi 5s nếu nó đang tắt.");
+})();
